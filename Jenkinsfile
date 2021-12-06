@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage("Build") {
+        stage("DEV_DEPLOY") {
             steps {
-                echo "Building the application..."
+                echo "DEV_DEPLOY the application..."
             }
         }
-        stage("Test") {
+        stage("QA_DEPLOY") {
             steps {
-                echo "Testing the application..." 
+                echo "QA_DEPLOY the application..." 
             }
         }
-        stage("Deploy") {
+        stage("CLEANUP") {
             steps {
-                echo "Deploying the application..."
+                echo "CLEANUP the application..."
             }
         }       
     }
