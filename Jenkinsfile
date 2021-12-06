@@ -6,8 +6,10 @@ pipeline {
                 echo "DEV_DEPLOY the application..."
             }
         }
+
         stage("QA_DEPLOY") {
             steps {
+		input "is agree to proceed to QA_DEPLOY ?"
                 echo "QA_DEPLOY the application..." 
             }
         }
